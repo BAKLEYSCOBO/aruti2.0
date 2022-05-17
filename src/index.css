@@ -5,9 +5,158 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+ul{
+  padding: 10px;
+  margin: 20px;
+}
+li{
+  list-style: none;
+  text-decoration: none;
+  padding: 2px;
+  margin: 2px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100vh;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #fff;
+}
+
+.main{
+  display: flex;
+  height: 100vh;
+}
+
+.title{
+  font-size: 3em;
+}
+.logo{
+  width: 100%;
+  height: 85%;
+  display: flex;
+  justify-content: space-around;
+
+}
+.closing-tag{
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+.info{
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: 1.5em;
+  color: rgba(22, 22, 22, 1);
+}
+
+.sidebar{
+  width: 260px;
+  flex-shrink: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  height: 100%;
+  overflow: auto;
+}
+
+
+.sidebar-item{
+  padding: .75em 1em;
+  display: block;
+  position: relative;
+  top: 30px;
+  transition: background-color .15s;
+  border-radius: 5px;
+}
+.sidebar-item:hover{
+  background-color: rgba(255, 255, 255, .1);
+}
+
+.sidebar-title{
+  display: flex;
+  font-size: 1.2em;
+  justify-content: space-between;
+  color: #000;
+  cursor: pointer;
+}
+.sidebar-title span i{
+  display: inline-block;
+  width: 1.5em;
+}
+.sidebar-title .toggle-btn{
+  cursor: pointer;
+  transition: transform .3s;
+}
+.sidebar-item.open > .sidebar-title .toggle-btn{
+  transform: rotate(180deg);
+}
+.sidebar-content{
+  padding-top: .25em;
+  height: 0;
+  overflow: hidden;
+}
+.sidebar-item.open > .sidebar-content{
+  height: auto;
+}
+
+.sidebar-item.plain{
+  color: #000;
+  text-decoration: none;
+}
+.sidebar-item.plain:hover{
+  text-decoration: underline;
+}
+.sidebar-item.plain i{
+  display: inline-block;
+  width: 1.7em;
+}
+.home {
+  font-size: larger;
+  color: #000;
+
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(168, 167, 167);
+  border-radius: 100px;
+  height: 1px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
